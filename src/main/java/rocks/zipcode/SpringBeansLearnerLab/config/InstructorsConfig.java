@@ -12,8 +12,8 @@ public class InstructorsConfig {
     @Bean
     public Instructors tcUsaInstructors() {
 //      Instructors usaInstructors = new Instructors(
-//                new Instructor(201L, "John"),
-//                new Instructor(202L, "Jane")
+//                new Instructor(201, "John"),
+//                new Instructor(202, "Jane")
 //        );
 //        return usaInstructors;
 //    }
@@ -22,25 +22,25 @@ public class InstructorsConfig {
 
     @Bean
     public Instructors tcUkInstructors() {
-//          Instructors ukInstructors = new Instructors(
-//                new Instructor(301L, "Michael"),
-//                new Instructor(302L, "Sarah")
-//        );
-//        return ukInstructors;
-        return new Instructors();
+          Instructors ukInstructors = new Instructors(
+                new Instructor(301, "Michael"),
+                new Instructor(302, "Sarah")
+        );
+        return ukInstructors;
+//        return new Instructors();
     }
 
     @Bean
     @Primary
     public Instructors instructors() {
-//             Instructors allInstructors = new Instructors(
-//                new Instructor(201L, "John"),
-//                new Instructor(202L, "Jane"),
-//                new Instructor(301L, "Michael"),
-//                new Instructor(302L, "Sarah")
-//        );
-//        return allInstructors;
-        return new Instructors();
+             Instructors allInstructors = new Instructors(
+                new Instructor(201, "John"),
+                new Instructor(202, "Jane"),
+                new Instructor(301, "Michael"),
+                new Instructor(302, "Sarah")
+        );
+        return allInstructors;
+//        return new Instructors();
    }
 }
 

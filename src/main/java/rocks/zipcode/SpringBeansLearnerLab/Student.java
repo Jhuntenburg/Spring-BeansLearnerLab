@@ -5,7 +5,7 @@ public class Student extends Person implements Learner{
 
 
 
-    public Student(Long id, String name) {
+    public Student(long id, String name) {
         super(id, name);
     }
 

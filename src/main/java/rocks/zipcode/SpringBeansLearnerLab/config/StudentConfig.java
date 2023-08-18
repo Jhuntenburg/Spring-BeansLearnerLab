@@ -12,23 +12,23 @@ public class StudentConfig {
 
     @Bean(name = "students")
     public Students currentStudents(){
-//        Students currentStudents = new Students(new Student
-//                (1L,"Alice"),
-//                new Student(2L,"Bob"),
-//                new Student(3L,"Charlie"));
-//        return currentStudents;
-        return new Students();
+        Students currentStudents = new Students(new Student
+                (1,"Alice"),
+                new Student(2,"Bob"),
+                new Student(3,"Charlie"));
+        return currentStudents;
+//        return new Students();
     }
 
     @Bean
     public Students previousStudents() {
 
-//        Students previousStudents = new Students(
-//                new Student(101L, "Eve"),
-//                new Student(102L, "Frank"),
-//                new Student(103L, "Grace")
-//        );
-//        return previousStudents;
-        return new Students();
+        Students previousStudents = new Students(
+                new Student(101, "Eve"),
+                new Student(102, "Frank"),
+                new Student(103, "Grace")
+        );
+        return previousStudents;
+//        return new Students();
     }
 }
