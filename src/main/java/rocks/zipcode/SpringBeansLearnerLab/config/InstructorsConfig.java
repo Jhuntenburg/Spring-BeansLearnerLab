@@ -11,14 +11,14 @@ public class InstructorsConfig {
 
     @Bean
     public Instructors tcUsaInstructors() {
-//      Instructors usaInstructors = new Instructors(
-//                new Instructor(201, "John"),
-//                new Instructor(202, "Jane")
-//        );
-//        return usaInstructors;
-//    }
-    return new Instructors();
+      Instructors usaInstructors = new Instructors(
+                new Instructor(201, "John"),
+                new Instructor(202, "Jane")
+        );
+        return usaInstructors;
     }
+//    return new Instructors();
+//    }
 
     @Bean
     public Instructors tcUkInstructors() {

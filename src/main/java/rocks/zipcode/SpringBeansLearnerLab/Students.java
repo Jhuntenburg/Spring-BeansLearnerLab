@@ -12,7 +12,7 @@ public class Students extends People<Student>{
     }
     @Override
     public Iterator<Student> iterator() {
-        return null;
+        return personList.iterator();
     }
 
     @Override

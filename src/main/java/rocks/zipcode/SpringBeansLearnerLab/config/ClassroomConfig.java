@@ -1,5 +1,6 @@
 package rocks.zipcode.SpringBeansLearnerLab.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
@@ -14,14 +15,17 @@ public class ClassroomConfig {
 
 
         @Bean
-        public Classroom currentCohort(Instructors instructors, Students students) {
+        @DependsOn({"instructors", "students"})
+        public Classroom currentCohort(@Qualifier("instructors") Instructors instructors,
+                                       @Qualifier("students") Students students) {
           Classroom currentClassroom = new Classroom(instructors, students);
             return currentClassroom;
         }
 
         @Bean
         @DependsOn({"instructors", "previousStudents"})
-        public Classroom previousCohort(Instructors instructors, Students previousStudents) {
+        public Classroom previousCohort(@Qualifier("instructors")Instructors instructors,
+                                        @Qualifier("previousStudents")Students previousStudents) {
           Classroom previousClassroom = new Classroom(instructors, previousStudents);
             return previousClassroom;
         }
